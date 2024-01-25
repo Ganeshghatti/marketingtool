@@ -34,7 +34,7 @@ export default function App() {
   const handleSubmit = async () => {
     try {
       await axios.post("http://localhost:5000/api/submit", { chips, emailSubject, emailBody });
-      console.log("Chips submitted successfully!");
+      alert("Emails sent successfully!");
     } catch (error) {
       console.error("Error submitting chips:", error);
     }
