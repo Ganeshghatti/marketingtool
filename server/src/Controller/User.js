@@ -2,15 +2,8 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const express = require("express");
-const bcrypt = require("bcrypt");
-const validator = require("validator");
-const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
-const speakeasy = require("speakeasy");
 const axios = require("axios");
-const moment = require("moment");
-const FormData = require("form-data");
-const { sendErrorEmail } = require("../utils/Errormail");
 
 const app = express();
 app.use(cors());
