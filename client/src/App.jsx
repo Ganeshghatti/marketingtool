@@ -33,9 +33,7 @@ export default function App() {
 
   const handleSubmit = async () => {
     try {
-      // Send the chips array to the backend using Axios
       await axios.post("https://marketing-tool-server.vercel.app/api/submit", { chips, emailSubject, emailBody });
-      // Do something after successful submission if needed
       console.log("Chips submitted successfully!");
     } catch (error) {
       console.error("Error submitting chips:", error);
