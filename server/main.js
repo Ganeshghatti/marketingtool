@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 app.post("/api/submit", async (req, res) => {
   const { chips, emailSubject, emailBody } = req.body;
-
+  console.log(chips, emailSubject, emailBody);
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -41,8 +41,8 @@ app.post("/api/submit", async (req, res) => {
     res.status(500).json({ error: "Failed to send emails" });
   }
 });
-app.get("/",(req,res)=>{
-    res.send("siuhfnwuehfwC")
-})
+app.get("/", (req, res) => {
+  res.send("siuhfnwuehfwC");
+});
 
 module.exports = app;
