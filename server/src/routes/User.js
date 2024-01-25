@@ -1,11 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const {register, auth, login, form}=require("../Controller/User")
-const requireAuth=require('../middleware/User')
+const { sendemail } = require("../Controller/User");
 
-// router.route("/register").post(register);
-// router.route("/auth").post(auth);
-// router.route("/login").post(login);
-router.route("/form").post(form);
+router.route("/api/submit").post(sendemail);
 
 module.exports = router;
