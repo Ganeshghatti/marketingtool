@@ -19,22 +19,23 @@ exports.sendemail = async (req, res, next) => {
       pass: "gecy jkfr fzmy dcwf",
     },
   });
-  const gifPath = path.join(__dirname, "..","music.gif");
+  const gifPath = path.join(__dirname, "..", "music.gif");
 
   const mailOptions = {
-    from: 'ganeshghatti6@gmail.com', // Replace with your Gmail address
-    subject: emailSubject || 'Default Subject', // Use provided subject or default to 'Default Subject'
+    from: "ganeshghatti6@gmail.com", // Replace with your Gmail address
+    subject: emailSubject || "Default Subject", // Use provided subject or default to 'Default Subject'
     html: `
+    <p>${emailBody || "Default Body"}</p>
       <p>Thank you for choosing our service! Here are our plans:</p>
       <img src="cid:unique-gif-id" alt="GIF">
       <p>Please contact us on our official email: info@company.com</p>
-    `, 
-    to: chips.join(','), // Join the array of emails into a comma-separated string
+    `,
+    to: chips.join(","), // Join the array of emails into a comma-separated string
     attachments: [
       {
-        filename: 'gif.gif',
+        filename: "gif.gif",
         path: gifPath,
-        cid: 'unique-gif-id', // Use a unique identifier for the GIF
+        cid: "unique-gif-id", // Use a unique identifier for the GIF
       },
     ],
   };
