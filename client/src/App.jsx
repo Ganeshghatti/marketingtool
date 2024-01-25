@@ -33,7 +33,7 @@ export default function App() {
 
   const handleSubmit = async () => {
     try {
-      await axios.post("http://localhost:5000/api/submit", { chips, emailSubject, emailBody });
+      await axios.post("https://marketing-tool-server.vercel.app/api/submit", { chips, emailSubject, emailBody });
       alert("Emails sent successfully!");
     } catch (error) {
       console.error("Error submitting chips:", error);
