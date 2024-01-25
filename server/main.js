@@ -41,5 +41,8 @@ app.post("/api/submit", async (req, res) => {
     res.status(500).json({ error: "Failed to send emails" });
   }
 });
+app.get("/",(req,res)=>{
+    res.send("siuhfnwuehfwC")
+})
 
 module.exports = app;
