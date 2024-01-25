@@ -1,7 +1,5 @@
 const app = require("../main");
 
-const PORT = process.env.PORT;
-
-const server = app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+const server = app.listen(5000, () => {
+  console.log(`Server running at http://localhost:5000`);
 });
